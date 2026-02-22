@@ -9,18 +9,20 @@
 <header class="sticky top-0 w-full bg-[#003652]">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center relative">
         <!-- Logo -->
-        <a class="flex items-center" href="index.html">
+        <a class="flex items-center" href="homepage.html">
             <img alt="Gameforge logo" class="h-16 w-auto" src="/assets/img/logo.png">
         </a>
 
         <!-- Searchbox -->
         <div class="absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
-            <input class="w-full px-4 py-2 rounded-lg border outline-none focus:ring-2" placeholder="Search games..." type="search">
+            <label>
+                <input id="game-searchbox" class="w-full px-4 py-2 rounded-lg border outline-none focus:ring-2" placeholder="Search games..." type="search">
+            </label>
         </div>
 
         <!-- Navbar Buttons -->
         <nav class="ml-auto flex items-center gap-6">
-            <a class="font-medium hover:underline" href="index.html">Home</a>
+            <a class="font-medium hover:underline" href="homepage.html">Home</a>
             <a class="font-medium hover:underline" href="#">Collections</a>
             <a class="font-medium hover:underline" href="#">Account</a>
         </nav>
