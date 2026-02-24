@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+</head>
+<body class="text-white min-h-screen flex flex-col">
+<header class="sticky w-full bg-[#003652]">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center relative">
+    </div>
+</header>
+
+<main class="bg-[#001B29] flex-1">
+    <div class="flex min-h-full flex-col justify-center items-center">
+        <!-- Login -->
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm text-center">
+            <h2 class="mt-10 text-2xl/9 font-bold tracking-tight text-white">Inloggen</h2>
+            <i class="mt-10 text-7xl fa fa-user-o"></i>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-sm/6 font-medium text-gray-100">E-mailadres</label>
+                    <div class="mt-2">
+                        <input id="email" type="email" name="email" required autocomplete="email" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="password" class="block text-sm/6 font-medium text-gray-100">Wachtwoord</label>
+                        <div class="text-sm">
+                            <a href="#" class="font-semibold text-green-400 hover:text-green-300">Wachtwoord vergeten?</a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <input id="password" type="password" name="password" required autocomplete="current-password" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-green-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">Sign in</button>
+                </div>
+            </form>
+
+            <p class="mt-10 text-center text-sm/6 text-gray-400">
+                Nog geen account?
+                <a href="#" class="font-semibold text-green-400 hover:text-green-300">Registreer hier</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Rest of code -->
+
+</main>
+<footer class="bg-[#003652] py-6">
+    <div class="flex flex-col items-center">
+        <span>© 2026 GameForge</span>
+        <span>All rights reserved</span>
+
+        <!-- Terms of service RAWG API -->
+        <a href="https://rawg.io" target="_blank" class="font-medium hover:underline">
+            source of data used is RAWG API
+        </a>
+    </div>
+</footer>
+</body>
+</html>
