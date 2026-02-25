@@ -29,7 +29,7 @@
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
 
             <!-- Login Form -->
-            <form id="login-form" action="#" method="POST" class="space-y-6">
+            <form id="login-form" action="#" class="space-y-6">
                 <div>
                     <label for="login-email" class="block text-sm/6 font-medium text-gray-100">E-mailadres</label>
                     <div class="mt-2">
@@ -50,11 +50,14 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-green-400">Inloggen</button>
+                    <!-- TODO Must still be fixed -->
+                    <a href="homepage.html">
+                        <button type="button" class="flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-green-400">Inloggen</button>
+                    </a>
                 </div>
             </form>
 
-            <!-- Register Form hiden by default -->
+            <!-- Register Form hidden by default -->
             <form id="register-form" action="#" method="POST" class="space-y-6 hidden">
                 <div>
                     <label for="reg-name" class="block text-sm/6 font-medium text-gray-100">Gebruikersnaam</label>
