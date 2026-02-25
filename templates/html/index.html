@@ -2,45 +2,137 @@
 <html lang="nl-BE">
 <head>
     <meta charset="UTF-8">
-    <title>Page</title>
+    <title>GameForge - Inloggen</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body class="text-white min-h-screen flex flex-col">
 <header class="sticky w-full bg-[#003652]">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center relative">
-        <!-- Logo -->
-        <a class="flex items-center" href="index.html">
-            <img alt="Gameforge logo" class="h-16 w-auto" src="/assets/img/logo.png">
-        </a>
-
-        <!-- Searchbox -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
-            <input class="w-full px-4 py-2 rounded-lg border outline-none focus:ring-2" placeholder="Search games..." type="search">
-        </div>
-
-        <!-- Navbar Buttons -->
-        <nav class="ml-auto flex items-center gap-6">
-            <a class="font-medium hover:underline" href="index.html">Home</a>
-            <a class="font-medium hover:underline" href="#">Collections</a>
-            <a class="font-medium hover:underline" href="#">Account</a>
-        </nav>
     </div>
 </header>
+
 <main class="bg-[#001B29] flex-1">
-    
-<!-- Rest of code -->
-    
+    <div class="flex min-h-full flex-col justify-center items-center py-10">
+
+        <!-- Tabs -->
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm flex rounded-md overflow-hidden mb-6">
+            <button id="tab-login" onclick="showLogin()" class="w-1/2 py-2 text-center font-semibold bg-green-500 text-white">Inloggen</button>
+            <button id="tab-register" onclick="showRegister()" class="w-1/2 py-2 text-center font-semibold bg-white/10 text-gray-300 hover:bg-white/20">Registreren</button>
+        </div>
+
+        <!-- User icon -->
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm text-center">
+            <i class="text-7xl fa fa-user-o"></i>
+        </div>
+
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+
+            <!-- Login Form -->
+            <form id="login-form" action="#" method="POST" class="space-y-6">
+                <div>
+                    <label for="login-email" class="block text-sm/6 font-medium text-gray-100">E-mailadres</label>
+                    <div class="mt-2">
+                        <input id="login-email" type="email" name="email" required autocomplete="email" placeholder="user@example.com" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center justify-between">
+                        <label for="login-password" class="block text-sm/6 font-medium text-gray-100">Wachtwoord</label>
+                        <div class="text-sm">
+                            <a href="#" class="font-semibold text-green-400 hover:text-green-300">Wachtwoord vergeten?</a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <input id="login-password" type="password" name="password" required autocomplete="current-password" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-green-400">Inloggen</button>
+                </div>
+            </form>
+
+            <!-- Register Form hiden by default -->
+            <form id="register-form" action="#" method="POST" class="space-y-6 hidden">
+                <div>
+                    <label for="reg-name" class="block text-sm/6 font-medium text-gray-100">Gebruikersnaam</label>
+                    <div class="mt-2">
+                        <input id="reg-name" type="text" name="username" required placeholder="Gebruikersnaam" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="reg-email" class="block text-sm/6 font-medium text-gray-100">E-mailadres</label>
+                    <div class="mt-2">
+                        <input id="reg-email" type="email" name="email" required placeholder="user@example.com" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="reg-password" class="block text-sm/6 font-medium text-gray-100">Wachtwoord</label>
+                    <div class="mt-2">
+                        <input id="reg-password" type="password" name="password" required placeholder="Minimaal 8 tekens" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="reg-password2" class="block text-sm/6 font-medium text-gray-100">Wachtwoord bevestigen</label>
+                    <div class="mt-2">
+                        <input id="reg-password2" type="password" name="password_confirm" required placeholder="Herhaal wachtwoord" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" class="flex w-full justify-center rounded-md bg-green-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-green-400">Registreren</button>
+                </div>
+            </form>
+
+            <!-- Bottom links -->
+            <p id="link-login" class="mt-10 text-center text-sm/6 text-gray-400">
+                Nog geen account?
+                <a href="#" onclick="showRegister(); return false;" class="font-semibold text-green-400 hover:text-green-300">Registreer hier</a>
+            </p>
+            <p id="link-register" class="mt-10 text-center text-sm/6 text-gray-400 hidden">
+                Al een account?
+                <a href="#" onclick="showLogin(); return false;" class="font-semibold text-green-400 hover:text-green-300">Log hier in</a>
+            </p>
+        </div>
+    </div>
 </main>
+
 <footer class="bg-[#003652] py-6">
     <div class="flex flex-col items-center">
         <span>© 2026 GameForge</span>
         <span>All rights reserved</span>
-        
-        <!-- Terms of service RAWG API -->
-        <a href="https://rawg.io" target="_blank" class="font-medium hover:underline">
-            source of data used is RAWG API
-        </a>
     </div>
 </footer>
+
+<script>
+    function showLogin() {
+        document.getElementById('login-form').classList.remove('hidden');
+        document.getElementById('register-form').classList.add('hidden');
+        document.getElementById('link-login').classList.remove('hidden');
+        document.getElementById('link-register').classList.add('hidden');
+
+        document.getElementById('tab-login').classList.add('bg-green-500', 'text-white');
+        document.getElementById('tab-login').classList.remove('bg-white/10', 'text-gray-300');
+        document.getElementById('tab-register').classList.remove('bg-green-500', 'text-white');
+        document.getElementById('tab-register').classList.add('bg-white/10', 'text-gray-300');
+    }
+
+    function showRegister() {
+        document.getElementById('login-form').classList.add('hidden');
+        document.getElementById('register-form').classList.remove('hidden');
+        document.getElementById('link-login').classList.add('hidden');
+        document.getElementById('link-register').classList.remove('hidden');
+
+        document.getElementById('tab-register').classList.add('bg-green-500', 'text-white');
+        document.getElementById('tab-register').classList.remove('bg-white/10', 'text-gray-300');
+        document.getElementById('tab-login').classList.remove('bg-green-500', 'text-white');
+        document.getElementById('tab-login').classList.add('bg-white/10', 'text-gray-300');
+    }
+</script>
 </body>
 </html>
