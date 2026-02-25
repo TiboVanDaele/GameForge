@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="text-white min-h-screen flex flex-col">
-<header class="sticky top-0 w-full bg-[#003D5C]">
+<header class="sticky top-0 w-full bg-[var(--bg-headerfooter)]">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center relative gap-3">
         <!-- Logo -->
         <a class="flex items-center" href="homepage.html">
@@ -32,7 +33,7 @@
         </nav>
     </div>
 </header>
-<main class="bg-[#001B29] flex-1">
+<main class="bg-[var(--bg-main)] flex-1">
     <div id="games-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 m-2">
         <!-- example card  -->
         <a href="#" class="m-2">

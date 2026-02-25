@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="text-white min-h-screen flex flex-col">
-<header class="sticky top-0 w-full bg-[#003D5C]">
+<header class="sticky top-0 w-full bg-[var(--bg-headerfooter)]">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center relative gap-3">
         <!-- Logo -->
         <a class="flex items-center" href="homepage.html">
@@ -17,7 +17,7 @@
         <div class="flex-1 md:absolute md:left-1/2 md:-translate-x-1/2 w-full md:w-full md:max-w-md flex justify-center mt-0">
             <label class="w-full flex justify-center">
                 <input id="game-searchbox"
-                       class="w-full md:w-2/3 lg:w-full px-4 py-2 rounded-lg border focus:ring-2"
+                       class="w-full md:w-2/3 lg:w-full px-4 py-2 rounded-lg border focus:ring-2 text-black"
                        placeholder="Search games..."
                        type="search">
             </label>
@@ -26,8 +26,8 @@
         <!-- Navbar Buttons -->
         <nav class="flex items-center gap-4 md:gap-6 ml-auto md:ml-auto shrink-0">
             <a class="font-medium hover:underline" href="homepage.html">Home</a>
-            <a class="font-medium hover:underline" href="#">Collections</a>
-            <a class="font-medium hover:underline" href="#">Account</a>
+            <a class="font-medium hover:underline" href="collections.html">Collections</a>
+            <a class="font-medium hover:underline" href="account.html">Account</a>
         </nav>
     </div>
 </header>
@@ -36,11 +36,10 @@
 <!-- Rest of code -->
     
 </main>
-<footer class="bg-[#003652] py-6">
+<footer class="bg-[#003D5C] py-6">
     <div class="flex flex-col items-center">
         <span>© 2026 GameForge</span>
         <span>All rights reserved</span>
-        
         <!-- Terms of service RAWG API -->
         <a href="https://rawg.io" target="_blank" class="font-medium hover:underline">
             source of data used is RAWG API
