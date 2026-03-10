@@ -2,7 +2,7 @@
 <html lang="nl-BE">
 <head>
     <meta charset="UTF-8">
-    <title>Profiel</title>
+    <title>Collecties</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -27,31 +27,39 @@
         </nav>
     </div>
 </header>
+<main class="bg-[#001B29] flex-1">
 
-    <main class="flex-1 flex justify-center items-center py-10 bg-[var(--bg-main)]">
-        <div class="p-8 rounded-xl w-full max-w-md text-center shadow-lg">
-
-            <img src="../assets/img/profile.jpg" alt="Profielfoto"
-                 class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-green-500">
-
-            <h2 class="text-2xl font-bold mb-2">J4SP3R</h2>
-
-            <div class="bg-white/10 p-4 rounded-lg mb-4">
-                <p class="text-sm text-gray-300">
-                    Hallo, ik ben J4SP3R en ik speel graag EA FC 26, Minecraft en NHL 26.
-                </p>
+    <div id="collections-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 m-2">
+        <!-- example card  -->
+        <a href="myGames.html" class="m-2">
+            <div class="bg-[var(--bg-card)] rounded-xl overflow-hidden">
+                <img src="/assets/img/librarypic.png" alt="Game 1" class="w-full h-auto object-cover">
+                <div class="p-2 text-center font-medium">
+                    mijn Games
+                </div>
             </div>
+        </a>
 
-            <button class="w-full bg-green-500 hover:bg-green-400 py-2 rounded-md font-semibold">
-                Profiel bewerken
-            </button>
-        </div>
-    </main>
+        <a href="wishlist.html" class="m-2">
+            <div class="bg-[var(--bg-card)] rounded-xl overflow-hidden">
+                <img src="/assets/img/wishlist.png" alt="Game 1" class="w-full h-auto object-cover">
+                <div class="p-2 text-center font-medium">
+                    Wishlist
+                </div>
+            </div>
+        </a>
+    </div>
 
+</main>
 <footer class="bg-[#003652] py-6">
     <div class="flex flex-col items-center">
         <span class="text-[8px]">© 2026 GameForge</span>
         <span class="text-[8px]">All rights reserved</span>
+
+        <!-- Terms of service RAWG API -->
+        <a href="https://rawg.io" target="_blank" class="font-medium hover:underline text-[8px]">
+            source of data used is RAWG API
+        </a>
     </div>
 </footer>
 </body>
