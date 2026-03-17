@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Showcase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-white min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="text-center py-10">
+  <h1 class="text-4xl font-bold mb-2">Project Showcase</h1>
+  <p class="text-gray-300">Onze web development projecten</p>
+</header>
+
+<!-- PROJECTS -->
+<main class="flex-1 flex items-center justify-center">
+  <div class="grid md:grid-cols-3 gap-8 px-6 max-w-6xl w-full">
+
+    <!-- GameForge -->
+    <div class="bg-slate-800 rounded-2xl shadow-lg hover:scale-105 transition cursor-pointer"
+         onclick="openProject('gameforge')">
+
+      <div class="h-40 rounded-t-2xl overflow-hidden flex items-center justify-center bg-gray-700">
+        <span class="text-gray-300">
+          <img src="../assets/img/logo.png" class="h-24 object-contain">
+        </span>
+      </div>
+
+      <div class="p-5 text-center">
+        <h2 class="text-xl font-bold">GameForge</h2>
+        <p class="text-gray-400 text-sm mt-2">Onze hoofdapplicatie</p>
+      </div>
+    </div>
+
+    <!-- LegoMasters -->
+    <div class="bg-slate-800 rounded-2xl shadow-lg hover:scale-105 transition cursor-pointer"
+         onclick="showPopup()">
+
+      <div class="h-40 rounded-t-2xl overflow-hidden">
+        <span class="text-gray-300">
+          <img src="../assets/img/Legomasters.png" class="w-full h-full object-cover">
+        </span>
+      </div>
+
+      <div class="p-5 text-center">
+        <h2 class="text-xl font-bold">LegoMasters</h2>
+        <p class="text-gray-400 text-sm mt-2">Creatieve bouw app</p>
+      </div>
+    </div>
+
+    <!-- MusicMatch -->
+    <div class="bg-slate-800 rounded-2xl shadow-lg hover:scale-105 transition cursor-pointer"
+         onclick="showPopup()">
+
+      <div class="h-40 rounded-t-2xl overflow-hidden">
+        <span class="text-gray-300">
+          <img src="../assets/img/musicmatch.png" class="w-full h-full object-cover">
+        </span>
+      </div>
+
+      <div class="p-5 text-center">
+        <h2 class="text-xl font-bold">MusicMatch</h2>
+        <p class="text-gray-400 text-sm mt-2">Vind muziek op basis van smaak</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- POPUP -->
+<div id="popup"
+     class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+
+  <div class="bg-slate-800 p-8 rounded-xl text-center shadow-xl">
+    <h2 class="text-2xl font-bold mb-4">Niet beschikbaar</h2>
+    <p class="text-gray-300 mb-6">Dit project is momenteel niet beschikbaar.</p>
+
+    <button onclick="closePopup()"
+            class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">
+      Sluiten
+    </button>
+  </div>
+
+</div>
+
+<script src="../js/landing.js" defer></script>
+</body>
+</html>
